@@ -14,5 +14,6 @@ class Character(models.Model):
     romanceable=models.BooleanField()
     image= models.ImageField()
     game = models.ForeignKey(VideoGame, on_delete=models.CASCADE, related_name='characters')
+    description = models.TextField()
 
     def __str__(self): return self.name
