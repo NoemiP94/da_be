@@ -7,7 +7,7 @@ def characters_by_game_view(request, game_id):
     characters = Character.objects.filter(game_id=game_id)
     characters_list = [ 
     { 
-        'id':character.id,
+        'id': character.id,
         'name': character.name, 
         'class': character.charcClass,
         'specialisation': character.specialisation,
@@ -17,9 +17,10 @@ def characters_by_game_view(request, game_id):
         'gender': character.gender,
         'race': character.race,
         'romanceable': character.romanceable,
+        'description': character.description,
         'game_id': character.game_id, 
         'image_url': request.build_absolute_uri(character.image.url) if character.image else None 
-
+        
         } 
         for character in characters 
         ]
@@ -39,6 +40,7 @@ def character_detail_view(request, character_id):
             'gender': character.gender,
             'race': character.race,
             'romanceable': character.romanceable,
+            'description': character.description,
             'game_id': character.game_id, 
             'image_url': request.build_absolute_uri(character.image.url) if character.image else None 
         }
