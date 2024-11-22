@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'games.apps.GamesConfig',
     'characters.apps.CharactersConfig',
+    'goal.apps.GoalConfig',
     'corsheaders',
 ]
 
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'da_be.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'goal', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
