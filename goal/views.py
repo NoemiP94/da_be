@@ -32,5 +32,4 @@ def goals_by_game_view(request, game_id):
         raise Http404("Goal does not exist")
     
 
-    #per usare img in html:
-    # <img :src="'data:image/jpeg;base64,' + goal.image_base64" alt="goal image">
+    

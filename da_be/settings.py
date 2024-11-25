@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'games.apps.GamesConfig',
     'characters.apps.CharactersConfig',
     'goal.apps.GoalConfig',
+    'dlc.apps.DlcConfig',
     'corsheaders',
 ]
 
