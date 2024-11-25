@@ -11,7 +11,7 @@ def dlc_by_game_view(request, game_id):
         dlc_list = [
             {
                 'id': dlc.id,
-                'title': dlc.title,
+                'name': dlc.name,
                 'year':dlc.year,
                 'content':dlc.content,
                 'game_id': dlc.game_id,
@@ -21,4 +21,4 @@ def dlc_by_game_view(request, game_id):
             ]
         return JsonResponse(dlc_list, safe=False)
     except Dlc.DoesNotExist:
-        raise Http404("Dlv does not exist")
+        raise Http404("Dlc does not exist")

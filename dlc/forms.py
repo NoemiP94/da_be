@@ -7,7 +7,7 @@ class DlcForm(forms.ModelForm):
 
     class Meta:
         model = Dlc
-        fields = ['title', 'year', 'content', 'game', 'image_file']
+        fields = ['name', 'year', 'content', 'game', 'image_file']
 
     def save(self, commit=True):
         instance = super().save(commit=False)

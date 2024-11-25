@@ -5,7 +5,7 @@ import base64
 # Create your models here.
 
 class Dlc(models.Model):
-    title = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     year = models.CharField(max_length=100)
     content = models.TextField()
     game = models.ForeignKey(VideoGame, on_delete=models.CASCADE, related_name='dlc')
