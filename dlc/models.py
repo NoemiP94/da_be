@@ -6,7 +6,7 @@ import base64
 
 class Dlc(models.Model):
     title = models.CharField(max_length=200)
-    year = models.CharField(max_length=4)
+    year = models.CharField(max_length=100)
     content = models.TextField()
     game = models.ForeignKey(VideoGame, on_delete=models.CASCADE, related_name='dlc')
     image_base64 = models.TextField()
