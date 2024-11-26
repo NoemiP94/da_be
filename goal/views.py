@@ -14,7 +14,7 @@ def goal_list_view(request):
     
 def goals_by_game_view(request, game_id):
     try:
-        goals = Goal.objects.filter(game_id=game_id)
+        goals = Goal.objects.filter(game_id=game_id, dlc_id__isnull=True)
         goal_list = [
             {
                 'id': goal.id, 
@@ -23,6 +23,7 @@ def goals_by_game_view(request, game_id):
                 'points': goal.points, 
                 'award_type': goal.award_type, 
                 'game_id': goal.game_id, 
+                'dlc_id': goal.dlc,
                 'image_base64': goal.image_base64
             }
             for goal in goals
