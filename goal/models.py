@@ -10,7 +10,7 @@ class Goal(models.Model):
     requirements = models.TextField()
     points = models.CharField(max_length=100)
     award_type = models.CharField(max_length=300)
-    game = models.ForeignKey(VideoGame, on_delete=models.CASCADE, related_name='goal',default='', null=True, blank=True)
+    game = models.ForeignKey(VideoGame, on_delete=models.CASCADE, related_name='goal',default='', blank=True)
     dlc = models.ForeignKey(Dlc, on_delete=models.CASCADE, related_name='goal',default='', null=True, blank=True)
     image_base64 = models.TextField()
 
