@@ -33,7 +33,7 @@ def game_detail_view(request, game_id):
             'mac_graphics_memory': game.mac_graphics_memory,
             'mac_hard_drive': game.mac_hard_drive,
             'mac_other': game.mac_other,
-            'image_url':request.build_absolute_uri(game.image.url) if game.image else None    
+            'image_base64': game.image_base64   
         }
         return JsonResponse(game_data)
     except VideoGame.DoesNotExist:

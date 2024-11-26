@@ -19,7 +19,7 @@ def characters_by_game_view(request, game_id):
         'romanceable': character.romanceable,
         'description': character.description,
         'game_id': character.game_id, 
-        'image_url': request.build_absolute_uri(character.image.url) if character.image else None 
+        'image_base64': character.image_base64
         
         } 
         for character in characters 
@@ -42,7 +42,7 @@ def character_detail_view(request, character_id):
             'romanceable': character.romanceable,
             'description': character.description,
             'game_id': character.game_id, 
-            'image_url': request.build_absolute_uri(character.image.url) if character.image else None 
+            'image_base64': character.image_base64
         }
         return JsonResponse(character_data)
     except Character.DoesNotExist:

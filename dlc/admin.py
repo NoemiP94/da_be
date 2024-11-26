@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from dlc.forms import DlcForm
 from dlc.models import Dlc
-from goal.widgets import Base64ImageWidget
+from dlc.widgets import Base64ImageWidget
 
 # Register your models here.
 
