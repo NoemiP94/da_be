@@ -7,7 +7,7 @@ from .models import Goal
 def goal_list_view(request):
     try:
         goals = Goal.objects.all()
-        goal_list = list(goals.values('id', 'name', 'requirements', 'points', 'award_type', 'game_id', 'image_base64'))
+        goal_list = list(goals.values('id', 'name', 'requirements', 'points', 'award_type', 'game_id','dlc_id', 'image_base64'))
         return JsonResponse(goal_list, safe=False)
     except Goal.DoesNotExist:
         raise Http404("Goal does not exist")
@@ -23,6 +23,7 @@ def goals_by_game_view(request, game_id):
                 'points': goal.points, 
                 'award_type': goal.award_type, 
                 'game_id': goal.game_id, 
+                'dlc_id': goal.dlc_id,
                 'image_base64': goal.image_base64
             }
             for goal in goals

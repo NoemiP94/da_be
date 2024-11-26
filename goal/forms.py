@@ -6,7 +6,7 @@ class GoalForm(forms.ModelForm):
 
     class Meta:
         model = Goal
-        fields = ['name', 'requirements', 'points', 'award_type', 'game', 'image_file']
+        fields = ['name', 'requirements', 'points', 'award_type', 'game','dlc', 'image_file']
 
     def save(self, commit=True):
         instance = super().save(commit=False)
