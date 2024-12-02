@@ -10,7 +10,7 @@ I create a server linked to a database where you can add:
 ## ⚙️How to install
 This project is developed using **Python/Django** and **PostegreSQL** for data storage
 
-1) Clone this repository in your PC and open with you Visual Studio Code
+1) Clone this repository in your PC and open with your Visual Studio Code
 2) Create a new PostgreSQL database
 3) Create a file named .env inside the main folder of the project with the follow environment variables and add your personal data:
 - SECRET_KEY 
